@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //no.1
+       let PABP = 70;
+       let MTK = 82;
+       let DPK = 77;
+       let total = (PABP + MTK + DPK) /3;
+
+       if(total >80 && total <100){
+        console.log('grade A')
+       } else if(total >=75 && total <80){
+        console.log('Grade B')
+       } else if(total >= 65 && total <75){
+        console.log('Grade C')
+       } else if(total >=45 && total <65){
+        console.log('Grade D')
+       } else if(total >=0 && total <45){
+        console.log('Grade E')
+       } 
+
+       //no.2
+       function cetakInfoPegawai(kodepegawai) {
+
+        var golongan = parseInt(kodepegawai.charAt(0));
+        var tanggal = parseInt(kodepegawai.substr(1,2));
+        var bulan = parseInt(kodepegawai.substr(3, 2));
+        var tahun = parseInt(kodepegawai.substr(5, 4));
+        var nomorurut =parseInt(kodepegawai.substr(9, 2));
+
+        var namabulan = [
+            "januarti", "februari", "maret",
+            "april", "mei", "juni", "juli", "agustus",
+            "september", "oktober", "november", "desember"
+        ];
+
+        var namabulanlahir = namabulan[bulan -1];
+
+        console.log("Nomor Golongan:" +golongan);
+        console.log("Tanggal Lahir:" +tanggal +"" +namabulanlahir +"" +tahun);
+        console.log("Nomor Urut:" +nomorurut +"");
+        }
+
+        var kodepegawai = "12310200705"
+        cetakInfoPegawai(kodepegawai)
+
+        //no.3
+        function menghitung (datajam, datamenit, datadetik){
+            let totaldetik = datajam * 3600 + datamenit * 60 + datadetik;
+            let hasiltotaldetik = totaldetik + 1;
+            let totaljam = (Math.floor(hasiltotaldetik % 3600) % 24);
+            let sisadetik = hasiltotaldetik % 3600;
+            let totalmenit = Math.floor(sisadetik / 60);
+            let second = sisadetik % 60;
+
+            console.log(`${datajam} jam ${datamenit} menit $(datadetik) detik`);
+            console.log(`${totaljam} jam ${totalmenit} menit ${second} detik`);
+        }
+
+        menghitung(2, 25, 11)
+       
+
+    </script>
+</body>
+</html>

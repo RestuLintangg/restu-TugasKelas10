@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //no.1
+        let jeruk = 1000;
+        let harga = jeruk*500;
+        let bayar = 0.05*harga;
+        let diskon = bayar - harga;
+
+        console.log('harga sebelum diskon', harga)
+        console.log('harga setelah diskon', bayar)
+        console.log('total diskon', diskon)
+
+        //no.3
+        let cuaca = 270;
+        let fahrenheit = (9/5*cuaca)+32;
+        
+        if(fahrenheit >= 300){
+            console.log('panas')
+        } else if(fahrenheit <= 250){
+            console.log('dingin')
+        } else {
+            console.log('normal')
+        }
+
+        //no.2
+        let bilangan = 456;
+        let satuan = Math.floor(bilangan % 10)
+        let puluhan = Math.floor(bilangan % 100 /10)
+        let ratusan = Math.floor(bilangan % 1000 /100)
+
+        console.log('Satuannya', satuan)
+        console.log('Puluhannya', puluhan)
+        console.log('Ratusannya', ratusan)
+    </script>
+</body>
+</html>

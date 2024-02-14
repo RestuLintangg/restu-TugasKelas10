@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //no.2
+        let jam = 1;
+        let menit = 10;
+        let detik = 40;
+        let total = jam*3600 + menit*60 + detik;
+
+        console.log(total,'detik');
+
+        //no.1
+        let namaKaryawan = 'Restu';
+        let gajiPokok = 10000000;
+        let tunjangan = 0.2*gajiPokok;
+        let pajak = 0.15*gajiPokok;
+        let gajiBersih = gajiPokok - tunjangan - pajak;
+
+        console.log('Nama Karyawan ',namaKaryawan)
+        console.log('Gaji Pokok',gajiPokok)
+        console.log('Tunjangan', tunjangan)
+        console.log('Pajak', pajak)
+        console.log('Gaji Bersih', gajiBersih)
+
+        //no.3
+        let totaldetik = 3200;
+        let sjam = Math.floor(totaldetik / 3600);
+        let sisaDetik = totaldetik % 3600;
+        let smenit = Math.floor(sisaDetik / 60);
+        let sdetik = sisaDetik % 60;
+        console.log(sjam, 'jam') 
+        console.log(smenit, 'menit')
+        console.log(sdetik, 'detik')
+    </script>
+</body>
+</html>
